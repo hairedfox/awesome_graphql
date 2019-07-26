@@ -53,6 +53,7 @@ const typeDefs = `
 
   type Mutation {
     createFriend(input: FriendInput): Friend
+    updateFriend(input: FriendInput): Friend
   }
 `;
 
