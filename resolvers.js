@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { Friends } from './data/dbConnector';
+import { Friends, Aliens } from './data/dbConnector';
 
 // resolver map
 export const resolvers = {
@@ -7,6 +7,9 @@ export const resolvers = {
     getFriend: ({ id }) => {
       return new Friend(id, friendDatabase[id]);
     },
+    getAliens: () => {
+      return Aliens.findAll();
+    }
   },
   Mutation: {
     createFriend: (root, { input }) => {
